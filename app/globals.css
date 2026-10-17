@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --paper: #f2f4f6;
+  --ink: #13233a;
+  --blueprint: #1f5fbf;
+  --callout: #d9480f;
+  --rule: #c5ced9;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #0f1a2b;
+    --ink: #e6ecf5;
+    --blueprint: #6ea2f0;
+    --callout: #ff8a5c;
+    --rule: #2b3d58;
+  }
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Avenir Next", Avenir, "Segoe UI", system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+/* drafting-grid backdrop */
+.grid-paper {
+  background-image:
+    linear-gradient(var(--rule) 1px, transparent 1px),
+    linear-gradient(90deg, var(--rule) 1px, transparent 1px);
+  background-size: 32px 32px;
+  background-position: -1px -1px;
+}
+
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--callout);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
