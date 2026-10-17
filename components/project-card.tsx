@@ -36,6 +36,20 @@ export default function ProjectCard({ p, flip }: { p: Project; flip: boolean }) 
           </a>
         )}
       </div>
+      {p.gallery && (
+        <div className="md:col-span-12">
+          <h4 className="text-lg font-semibold">Onshape CAD</h4>
+          <ul className="mt-4 grid gap-4 sm:grid-cols-3">
+            {p.gallery.map((g) => (
+              <li key={g.src}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={g.src} alt={g.alt} loading="lazy" className="aspect-[4/3] w-full border border-rule bg-white object-contain" />
+                <p className="mt-2 text-sm">{g.caption}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
       {p.results && (
         <div className="md:col-span-12">
           <h4 className="text-lg font-semibold">{p.results.caption}</h4>

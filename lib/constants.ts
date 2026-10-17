@@ -68,6 +68,7 @@ export type Project = {
   tools: string[];
   repo?: string;
   repoLabel?: string;
+  gallery?: { src: string; alt: string; caption: string }[];
   results?: {
     caption: string;
     image?: string;
@@ -100,6 +101,23 @@ export const projects: Project[] = [
     tools: ["Onshape", "3D printing", "Laser cutting", "Raspberry Pi Pico 2 W", "Python", "HTML/CSS", "GitHub"],
     repo: "https://github.com/LilaForsythe/Hack_ElectricBlue_Summer2026",
     repoLabel: "Team repository",
+    gallery: [
+      {
+        src: "/images/hack-cloud-top.png",
+        alt: "Onshape models of the cloud top shell with star cut-outs, a lightning-bolt slider, diamond switch covers, and the Electric Blue logo, plus the flat laser-cut outline",
+        caption: "Cloud top shell, bolt slider, and switch covers",
+      },
+      {
+        src: "/images/hack-cloud-sides.png",
+        alt: "Onshape models of the cloud side shells, with pins on the bottom piece and notches along the edge where the wire tubes pass through",
+        caption: "Side shells with snap pins and tube notches",
+      },
+      {
+        src: "/images/hack-buttons-tubes.png",
+        alt: "Onshape models of an engraved C4 raindrop cover, the raindrop base that holds a button board, and the wire tube in three pieces",
+        caption: "Raindrop key covers and wire tubes",
+      },
+    ],
   },
   {
     slug: "quarter-car-suspension",
